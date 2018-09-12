@@ -419,7 +419,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename='/project6'>
         <div className="App">
 
           <Route
