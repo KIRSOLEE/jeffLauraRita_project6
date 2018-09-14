@@ -3,7 +3,7 @@
 }
 
 .results,
-.savedList {
+.savedList, .displayStock {
   margin: 0 auto;
   padding-bottom: 40px;
   clear: both;
@@ -80,6 +80,12 @@
     }
   }
 }
+
+.displayStock .wrapper .stockCard {
+        padding-top: 10px;
+        padding-bottom: 20px;
+}
+
 .savedList {
   min-height: calc(100vh - 110px);
   h2 {
@@ -149,6 +155,12 @@
     height: calc((3 * 2.3rem) + 0.9rem);
     -webkit-line-clamp: 3;
   }
+.displayStock .wrapper .stockCard {
+      float: left;
+      width: calc(50% - 2%);
+      margin: 1%;
+}
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -171,6 +183,12 @@
       margin: 20px auto;
     }
   }
+.displayStock .wrapper .stockCard {
+      float: left;
+      width: calc(100% - 2%);
+      margin: 1%;
+}
+
 }
 
 /* Landscape phones and down */

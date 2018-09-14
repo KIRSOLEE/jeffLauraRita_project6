@@ -171,9 +171,8 @@ class Wineinfo extends Component {
   }
 
   render() {
-    return (
-      <div className="wineInfo clearfix">
-        <Nav appstate={this.props.appstate}/>
+    return <div className="wineInfo clearfix">
+        <Nav appstate={this.props.appstate} />
         <div className="wrapper">
           <figure className="imageWrapper">
             <img src={this.state.wine.image_url} alt={this.state.wine.name} />
@@ -181,35 +180,26 @@ class Wineinfo extends Component {
           <div className="content">
             <div className="contentWrapper">
               <h1>{this.state.wine.name}</h1>
-              {this.state.wine.price_in_cents ==
-              this.state.wine.regular_price_in_cents ? (
-                <div className="priceWrapper">
+              {this.state.wine.price_in_cents == this.state.wine.regular_price_in_cents ? <div className="priceWrapper">
                   <p>
                     {`$${this.state.wine.price_in_cents / 100}`}
                     <span>/bottle</span>
                   </p>
-                </div>
-              ) : (
-                <div className="priceWrapper">
+                </div> : <div className="priceWrapper">
                   <p>
-                    <span className="regular">{`$${(this.state.wine
-                      .regular_price_in_cents / 100).toFixed(2)}`}</span>
-                    <span className="sale">{`$${(this.state.wine.price_in_cents /
-                      100).toFixed(2)}`}</span>
+                    <span className="regular">{`$${(this.state.wine.regular_price_in_cents / 100).toFixed(2)}`}</span>
+                    <span className="sale">{`$${(this.state.wine.price_in_cents / 100).toFixed(2)}`}</span>
                     <span className="bottle">/bottle</span>
                   </p>
-                </div>
-              )}
-              <p className="wineDescription">{`${
-                this.state.wine.tasting_note
-              }`}</p>
+                </div>}
+              <p className="wineDescription">{`${this.state.wine.tasting_note}`}</p>
               <div className="wineServingSuggestBox">
-                  {this.state.wine.serving_suggestion !== null ? ( 
-                  <div>
-                    <p className="wineServingSuggestTitle">Serving Suggestion</p>
+                {this.state.wine.serving_suggestion !== null ? <div>
+                    <p className="wineServingSuggestTitle">
+                      Serving Suggestion
+                    </p>
                     <p className="wineServingSuggest">{`${this.state.wine.serving_suggestion}`}</p>
-                  </div>
-                  ) : null}
+                  </div> : null}
               </div>
               <ul>
                 <li>
@@ -225,26 +215,22 @@ class Wineinfo extends Component {
                   {`${this.state.wine.alcohol_content / 100}%`}
                 </li>
               </ul>
-              {this.props.user ? (
-                <button onClick={this.addToFavs} className="btn btnAlt">
+              {this.props.user ? <button onClick={this.addToFavs} className="btn btnAlt">
                   <i class="fas fa-plus" /> Add to Cellar
-                </button>
-              ) : (
-                <button onClick={this.addToError} className="btn btnAlt">
+                </button> : <button onClick={this.addToError} className="btn btnAlt">
                   <i class="fas fa-plus" /> Add to Cellar
-                </button>
-              )}
+                </button>}
               <button onClick={this.geolocation} className="btn">
                 <i class="fas fa-map-marker-alt" /> Find near me
               </button>
             </div>
             {/* closes content wrapper */}
-            <DisplayStock arrayOfStock={this.state.arrayOfStock} />
+            {/* <DisplayStock arrayOfStock={this.state.arrayOfStock} /> */}
           </div>
           {/* closes content */}
+          <DisplayStock arrayOfStock={this.state.arrayOfStock} />
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 

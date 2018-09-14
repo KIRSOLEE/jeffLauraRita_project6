@@ -3,13 +3,15 @@ import React, { Component } from "react";
 class DisplayStock extends Component {
   render() {
     return (
-      <div>
+      <div className="displayStock">
+      <div className="wrapper">
         {this.props.arrayOfStock.map(store => {
           return (
+            <div className="card stockCard">
             <div className="storeInfo" key={store.storeId}>
               <h3>{store.storeName} LCBO</h3>
               <p>
-                <span>In Stock: </span> {store.stockAmount} bottles available
+                {store.stockAmount} bottles available
               </p>
               <p>
                 <span>Address: </span>
@@ -24,8 +26,10 @@ class DisplayStock extends Component {
                 </a>
               </p>
             </div>
+            </div>
           );
         })}
+        </div>
       </div>
     );
   }

@@ -586,16 +586,16 @@ header {
   padding-bottom: 0px; }
 
 .results,
-.savedList {
+.savedList, .displayStock {
   margin: 0 auto;
   padding-bottom: 40px;
   clear: both;
   text-align: center; }
   .results .btn,
-  .savedList .btn {
+  .savedList .btn, .displayStock .btn {
     margin: 25px; }
   .results .wrapper .sale,
-  .savedList .wrapper .sale {
+  .savedList .wrapper .sale, .displayStock .wrapper .sale {
     position: absolute;
     background-color: #dd9afc;
     color: white;
@@ -606,7 +606,7 @@ header {
     top: -20px;
     left: -10px; }
   .results .wrapper .card,
-  .savedList .wrapper .card {
+  .savedList .wrapper .card, .displayStock .wrapper .card {
     float: left;
     width: calc(33% - 2%);
     margin: 1%;
@@ -615,27 +615,27 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
     .results .wrapper .card:hover,
-    .savedList .wrapper .card:hover {
+    .savedList .wrapper .card:hover, .displayStock .wrapper .card:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
     .results .wrapper .card .cardWrapper,
-    .savedList .wrapper .card .cardWrapper {
+    .savedList .wrapper .card .cardWrapper, .displayStock .wrapper .card .cardWrapper {
       text-align: left;
       position: relative; }
       .results .wrapper .card .cardWrapper .imageWrapper,
-      .savedList .wrapper .card .cardWrapper .imageWrapper {
+      .savedList .wrapper .card .cardWrapper .imageWrapper, .displayStock .wrapper .card .cardWrapper .imageWrapper {
         float: left;
         width: 45%; }
       .results .wrapper .card .cardWrapper .btn,
-      .savedList .wrapper .card .cardWrapper .btn {
+      .savedList .wrapper .card .cardWrapper .btn, .displayStock .wrapper .card .cardWrapper .btn {
         margin: 20px 0; }
       .results .wrapper .card .cardWrapper .cardSide,
-      .savedList .wrapper .card .cardWrapper .cardSide {
+      .savedList .wrapper .card .cardWrapper .cardSide, .displayStock .wrapper .card .cardWrapper .cardSide {
         float: left;
         width: calc(55% - 4%);
         height: 100%;
         padding: 0 0 0 8px; }
         .results .wrapper .card .cardWrapper .cardSide .wineTitle h3,
-        .savedList .wrapper .card .cardWrapper .cardSide .wineTitle h3 {
+        .savedList .wrapper .card .cardWrapper .cardSide .wineTitle h3, .displayStock .wrapper .card .cardWrapper .cardSide .wineTitle h3 {
           display: block;
           max-width: 100%;
           height: calc((3 * 2rem) + 0.8rem);
@@ -646,13 +646,17 @@ header {
           overflow: hidden;
           color: #4a4a4a; }
         .results .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice,
-        .savedList .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice {
+        .savedList .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice, .displayStock .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice {
           color: #4a4a4a;
           font-size: 1.8rem;
           margin: 0; }
           .results .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice span,
-          .savedList .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice span {
+          .savedList .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice span, .displayStock .wrapper .card .cardWrapper .cardSide .winePriceWrapper .winePrice span {
             font-size: 70%; }
+
+.displayStock .wrapper .stockCard {
+  padding-top: 10px;
+  padding-bottom: 20px; }
 
 .savedList {
   min-height: calc(100vh - 110px); }
@@ -699,7 +703,11 @@ header {
   .savedList .wrapper .card .cardWrapper .cardSide .wineTitle h3 {
     font-size: 2.3rem;
     height: calc((3 * 2.3rem) + 0.9rem);
-    -webkit-line-clamp: 3; } }
+    -webkit-line-clamp: 3; }
+  .displayStock .wrapper .stockCard {
+    float: left;
+    width: calc(50% - 2%);
+    margin: 1%; } }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
@@ -716,7 +724,11 @@ header {
       float: none;
       width: 400px;
       max-width: 400px;
-      margin: 20px auto; } }
+      margin: 20px auto; }
+  .displayStock .wrapper .stockCard {
+    float: left;
+    width: calc(100% - 2%);
+    margin: 1%; } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
